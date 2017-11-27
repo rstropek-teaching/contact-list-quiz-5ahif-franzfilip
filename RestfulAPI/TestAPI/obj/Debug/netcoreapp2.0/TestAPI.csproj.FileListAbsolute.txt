@@ -1,0 +1,16 @@
+D:\Schule\POSE C#\5AHIF\Repositorys\RESTAPI\RestfulAPI\TestAPI\obj\Debug\netcoreapp2.0\TestAPI.csprojResolveAssemblyReference.cache
+D:\Schule\POSE C#\5AHIF\Repositorys\RESTAPI\RestfulAPI\TestAPI\obj\Debug\netcoreapp2.0\TestAPI.csproj.CoreCompileInputs.cache
+D:\Schule\POSE C#\5AHIF\Repositorys\RESTAPI\RestfulAPI\TestAPI\obj\Debug\netcoreapp2.0\TestAPI.AssemblyInfoInputs.cache
+D:\Schule\POSE C#\5AHIF\Repositorys\RESTAPI\RestfulAPI\TestAPI\obj\Debug\netcoreapp2.0\TestAPI.AssemblyInfo.cs
+D:\Schule\POSE C#\5AHIF\Repositorys\RESTAPI\RestfulAPI\TestAPI\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\Schule\POSE C#\5AHIF\Repositorys\RESTAPI\RestfulAPI\TestAPI\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\Schule\POSE C#\5AHIF\Repositorys\RESTAPI\RestfulAPI\TestAPI\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\Schule\POSE C#\5AHIF\Repositorys\RESTAPI\RestfulAPI\TestAPI\bin\Debug\netcoreapp2.0\TestAPI.deps.json
+D:\Schule\POSE C#\5AHIF\Repositorys\RESTAPI\RestfulAPI\TestAPI\bin\Debug\netcoreapp2.0\TestAPI.runtimeconfig.json
+D:\Schule\POSE C#\5AHIF\Repositorys\RESTAPI\RestfulAPI\TestAPI\bin\Debug\netcoreapp2.0\TestAPI.runtimeconfig.dev.json
+D:\Schule\POSE C#\5AHIF\Repositorys\RESTAPI\RestfulAPI\TestAPI\bin\Debug\netcoreapp2.0\TestAPI.dll
+D:\Schule\POSE C#\5AHIF\Repositorys\RESTAPI\RestfulAPI\TestAPI\bin\Debug\netcoreapp2.0\TestAPI.pdb
+D:\Schule\POSE C#\5AHIF\Repositorys\RESTAPI\RestfulAPI\TestAPI\bin\Debug\netcoreapp2.0\RestfulAPI.dll
+D:\Schule\POSE C#\5AHIF\Repositorys\RESTAPI\RestfulAPI\TestAPI\bin\Debug\netcoreapp2.0\RestfulAPI.pdb
+D:\Schule\POSE C#\5AHIF\Repositorys\RESTAPI\RestfulAPI\TestAPI\obj\Debug\netcoreapp2.0\TestAPI.dll
+D:\Schule\POSE C#\5AHIF\Repositorys\RESTAPI\RestfulAPI\TestAPI\obj\Debug\netcoreapp2.0\TestAPI.pdb

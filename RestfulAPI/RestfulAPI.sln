@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestfulAPI", "RestfulAPI\RestfulAPI.csproj", "{CE367651-A125-4904-910A-F3E709858E70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestfulAPI", "RestfulAPI\RestfulAPI.csproj", "{CE367651-A125-4904-910A-F3E709858E70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAPI", "TestAPI\TestAPI.csproj", "{2A04876F-BF79-4E00-95D5-D881141D38B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{CE367651-A125-4904-910A-F3E709858E70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE367651-A125-4904-910A-F3E709858E70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE367651-A125-4904-910A-F3E709858E70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A04876F-BF79-4E00-95D5-D881141D38B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A04876F-BF79-4E00-95D5-D881141D38B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A04876F-BF79-4E00-95D5-D881141D38B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A04876F-BF79-4E00-95D5-D881141D38B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
