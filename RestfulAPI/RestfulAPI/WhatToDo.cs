@@ -23,7 +23,7 @@ namespace RestfulAPI
         /// <summary>
         /// Gets all Items from Person
         /// </summary>
-        /// <returns>JSON String of the Database Response</returns>
+        /// <returns></returns>
         [HttpGet]
         public IActionResult GetAllItems()
         {
@@ -57,24 +57,62 @@ namespace RestfulAPI
             return Ok(this.personlist);
         }
 
+        /// <summary>
+        /// Gets one Item from the table Person
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("{index}")]
+        public IActionResult GetOneItem(int index)
+        {
+            Person person = null;
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(this.GetSqlConnectionString().ConnectionString))
+                {
+                    connection.Open();
 
+                    String sql = "select * from person where PersonID = "+index+";";
+
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                person = new Person(Int32.Parse(reader.GetSqlValue(0).ToString()), reader.GetSqlValue(1).ToString(), reader.GetSqlValue(2).ToString(), reader.GetSqlValue(3).ToString());
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                //Console.WriteLine(e.ToString());
+                return BadRequest();
+            }
+
+            return Ok(person);
+        }
+
+        /// <summary>
+        /// Creates a new Person in the database
+        /// </summary>
+        /// <param name="person"></param>
+        /// <returns></returns>
         [HttpPost]
-        public IActionResult CreatePerson([FromBody] string test)//int PersonID, [FromBody] string prename, [FromBody] string surname, [FromBody] string email)
+        public IActionResult CreatePerson([FromBody] Person person)
         {
             try
             {
                 using (SqlConnection connection = new SqlConnection(this.GetSqlConnectionString().ConnectionString))
                 {
-                    /*
                     connection.Open();
-
-                    String sql = $"INSERT INTO PERSON (PersonID, prename, surname, email) VALUES ({PersonID}, {prename}, {surname}, {email});";
-
-                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    using (SqlCommand command = connection.CreateCommand())
                     {
+                        command.CommandText = $"INSERT INTO PERSON (PersonID, prename, surname, email) VALUES ({person.PersonID}, '{person.prename}', '{person.surname}', '{person.email}');";
                         command.ExecuteNonQuery();
                     }
-                    */
                 }
             }
             catch (Exception e)
@@ -82,10 +120,7 @@ namespace RestfulAPI
                 return BadRequest();
             }
 
-            //string x = prename + " " + surname;
-            string stringlein = "teststring --> "+test;
-            return Ok(stringlein);
-            //return Ok($"Person with PersonID {PersonID} and Name {prename} {surname} was created!");
+            return Ok($"Person with PersonID {person.PersonID} and Name {person.prename} {person.surname} was created!");
         }
 
         /// <summary>
@@ -119,6 +154,35 @@ namespace RestfulAPI
             return Ok($"Person with PersonID {index} was deleted!");
         }
 
+        /// <summary>
+        /// Updates one Item of Person
+        /// </summary>
+        /// <param name="person"></param>
+        /// <returns></returns>
+        [HttpPut]
+        [Route("{index}")]
+        public IActionResult UpdateOneItem([FromBody]Person person, int index)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(this.GetSqlConnectionString().ConnectionString))
+                {
+                    connection.Open();
+                    using (SqlCommand command = connection.CreateCommand())
+                    {
+                        command.CommandText = $"UPDATE PERSON SET prename = '{person.prename}', surname = '{person.surname}', email = '{person.email}' WHERE PersonID = {index};";
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                return BadRequest();
+            }
+
+            return Ok($"Person with PersonID {index} and Name {person.prename} {person.surname} has been updated!");
+        }
+        //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         //non API Methods
         public SqlConnectionStringBuilder GetSqlConnectionString()
         {
